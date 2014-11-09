@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="AuditMgtNew.Master" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>DJ Technologies</title>
+    <link href="Style/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form id="Form1" runat="server">
+<div id="container">
+	<div id="header">
+        <asp:Image ID="Image1" runat="server" Height="77px" 
+            ImageUrl="~/Images/dubai_holding_logo.png" Width="178px" />
+        <ul>
+			<li><a href="#">Tecom</a></li>
+			<li><a href="#">Dubai Properties</a></li>
+			<li><a href="#">Jumeirah</a></li>
+			<li><a href="#">Home</a></li>
+		</ul>
+       
+	</div>
+     <%-- <div id="navigation">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact us</a></li>
+		</ul>
+	</div>--%>
+     
+     <div id="content">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">   
+    </asp:ContentPlaceHolder> 
+     </div>
+     </div>
+     
+        <div id="footer">
+		<h5 style="color: #FFFFFF">© CONSUS International Solutions FZE 2014</h5>
+       <%-- <div id="navigation1">--%>
+		<ul>
+			<li><a href="#">Tecom</a></li>
+			<li><a href="#">Dubai Properties</a></li>
+			<li><a href="#">Jumeirah</a></li>
+			<li><a href="#">Home</a></li>
+		</ul>
+	<%--</div>--%>
+       
+	</div>
+   
+    
+    
+   
+
+   <%-- <table style = "height:100%" "width:100%">
+        <tr  style="height:200px">
+          <td colspan="2" style="height:10px">
+          <h1 style="background-color: #99CCFF">Audit Management System</h1>
+          </td>
+        </tr>
+        <tr>
+        <td width="20%" bgcolor="#dddddd" valign="top">--%>
+            <%-- <a href="TakeAudit.aspx">Start Audit</a>
+             <p />
+             <a href="previousexams.aspx">Previous Audits</a>
+             <p />
+              <a href="SelectReviewIndicator.aspx">Review Audits</a>
+             <p />
+              <a href="indicators.aspx">Indicators</a>
+             <p />
+              <a href="ReportAuditor.aspx">Reports</a>
+             <p />
+             <a href="changepassword.aspx">Change Password</a>--%>
+            <%-- <p>
+             <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" OnClick="LinkButton1_Click">Logout</asp:LinkButton> 
+             </p>
+             </td>
+             <td valign="top">--%>
+   
+   
+            <%-- </td>
+          </tr>
+        </table>--%>
+    
+    </form>
+</body>
+</html>

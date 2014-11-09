@@ -1,0 +1,498 @@
+﻿* {
+	margin: 1px 0 0 0;
+}
+html, body,form{
+	height:100%;	
+    margin: 0;
+    padding: 0;
+    width:100%;
+   
+    
+     }
+ body 
+ {
+     
+  
+   
+}
+ *  
+     {
+         font-family:Arial !important;
+         font-size:14px;
+         color: #444444;
+         
+         
+         
+         }
+html
+{
+    background: url('/Images/Background.png'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    
+    
+}
+#lblversion
+{
+    position: relative;
+    float: left;
+    padding-left:20px;
+    color:White;
+    
+}
+#Div1
+{
+     position: relative;
+    
+    top:5px; 
+    width :85%;
+    height:200px; 
+    left:50px;
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+
+    
+}
+.Gridview
+{
+font-family:Verdana;
+font-size:10pt;
+font-weight:normal;
+color:black;
+}
+
+    
+.wrapper 
+{
+   
+	padding: 0;
+	min-height: 100%;
+	position:relative;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+    
+}
+#header,#navigation,#content {
+	overflow: hidden;
+	
+}
+.footer, .push {
+	height: 100px; /* .push must be the same height as .footer */
+	
+}
+.footer{
+	
+	background: #EC1B30;
+	height: 100px;
+	bottom:0;
+	left:0;
+	
+	
+}
+
+    
+.footer ul
+{
+	
+	padding: 0;
+	
+}
+#para1
+{
+	
+	padding: 15px;
+	padding-bottom:0;
+}
+#para2
+{
+	
+	padding: 12px;
+	
+}
+#para3
+{
+	
+	padding: 12px;
+	
+}
+
+#para4
+{
+	padding-top:5px;
+	padding: 12px;
+	
+}
+#lblmsg,#lblmsg2
+{
+    position: relative;   
+    margin-left:30px;
+    
+    
+}
+
+
+
+.footer ul li
+{
+    
+	list-style-type: none;                                  
+	display:inline;
+	
+}
+
+.footer li a
+{
+	display: block;
+	float: right;
+	padding:0px 20px 0px 0px;
+	color: white;
+	text-decoration: none;
+	
+}
+
+.footer li a:hover { background:red; }
+
+
+#header 
+{
+    margin:0px;
+	padding: 0px;
+	background:white;
+	border-bottom:2px solid red;
+}
+#navigation
+{
+	float: right;
+	width: 100%;
+	background:#5ee;
+	height:80px;
+	
+	
+	
+}
+
+#header ul
+{
+	margin: 0;
+	padding: 0;
+	margin-bottom:10px;
+	
+}
+
+#header ul li
+{
+	list-style-type: none;
+	display: inline;
+	
+	
+}
+
+#header li a
+{
+	display: block;
+	float: right;
+	padding: 5px 10px;
+	color: #878787;
+	text-decoration: none;
+	border-right: 1px solid silver;
+	
+}
+
+#header li a:hover { background:red; }
+
+#content
+{
+    padding:10px;
+	padding-bottom:80px; 
+    
+}
+
+#txtQuestion
+{
+   
+   
+    
+}
+#TextBox1
+{
+    position: relative;
+    
+    top:5px; 
+    width :85%;
+    height:100px; 
+    left:50px;
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+	
+	
+	outline: none;
+	
+	
+	
+	
+}
+#logout 
+{
+    
+     position: relative;
+    
+     padding-top:50px;
+     padding-right:0px;
+    margin:0px;
+    
+    
+}
+#btnlogout
+{
+    position: relative;    
+    float:right;
+    list-style-type: none;
+	display: inline;
+    top: 0px;
+    left: 0px;
+}
+
+#TextBox2
+{
+    position: relative;
+    
+  
+    width :40%;
+    height:100px; 
+    left:50px;
+	background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+	
+	
+	outline: none;
+	
+	
+	
+	
+}
+#TextBox3
+{
+    position: relative;
+    
+  
+    width :40%;
+    height:100px; 
+    left:100px;
+	background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+	
+	
+	outline: none;
+	
+	
+	
+	
+}
+#table1
+{
+    margin-left:50px;
+   
+    
+}
+
+    
+
+#Label1
+{
+  margin-top:2em; 
+  float: left;
+  width : 10em;
+  margin-left :3.5em;
+    
+}
+
+#Label2
+{
+ float: right;
+ width : 10em;
+ margin-right : 8em;
+ margin-top:2em; 
+}
+#Label3
+{
+  
+  
+  width : 10em;
+  margin-left :3.5em;
+    
+}
+#Label4
+{
+ 
+  margin-left :3.5em;
+    
+}
+#Label5
+{
+ 
+ margin-right : 8em;
+    
+}
+#Panel1
+{
+    
+      
+    position:relative;
+    width :100%;
+    left:150px;
+    top:20px;   
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+    
+}
+#Panel2
+{
+    position:relative;
+    top:10px;
+    width :100%;
+    left:150px;   
+	background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+}
+#Panellogin
+{
+    
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+}
+#tblLogin
+{
+    position:relative;
+    top:5px;
+    width :90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+}
+#tblLogin2
+{
+    position:relative;
+    top:5px;
+    width :90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+    
+}
+#tblLoginJM
+{
+    
+    position:relative;
+    top:9px;
+    width :40%;
+   
+    
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+    
+    
+}
+#GridView1
+{
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+   
+    
+}
+#h6
+{
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+   
+    
+}
+#header,#navigation,#content,.footer {
+overflow:hidden;
+
+}
+.logo
+    {
+         margin-top:25px;
+         margin-bottom:25px;
+         
+    }
+
+#content
+{
+   min-height:100%;
+    
+    
+}
+#Image2
+{
+   
+    width:380px;
+    height:220px;
+    float:right;
+    
+    
+}
+.copy
+    {
+         margin-left:20px;
+         margin-top:40px;
+         color:White;
+        
+    }
+    #ImageButton2
+    {
+        
+        
+        
+    }
+    .heading
+    {
+        top:10px;
+        left:5px;
+        font-family:Arial;
+        font-size:medium;
+        
+    }

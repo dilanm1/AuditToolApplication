@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26F9F569-1459-476E-BC10-3213FDACDCE6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AuditMgtNew</RootNamespace>
+    <AssemblyName>AuditMgtNew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\documents\visual studio 2010\Projects\AuditAppConsus\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.1.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\documents\visual studio 2010\Projects\AuditAppConsus\packages\WindowsAzure.Storage.2.0.6.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddAuditLocation.aspx" />
+    <Content Include="Admin\AddAuditLocationDP.aspx" />
+    <Content Include="Admin\AddAuditLocationTC.aspx" />
+    <Content Include="Admin\AssignRolesJM.aspx" />
+    <Content Include="Admin\AdminDP.aspx" />
+    <Content Include="Admin\AdminJM.aspx" />
+    <Content Include="Admin\AdminTC.aspx" />
+    <Content Include="Admin\CreateAccount.aspx" />
+    <Content Include="Admin\CurrentAuditsDP.aspx" />
+    <Content Include="Admin\CurrentAuditsTC.aspx" />
+    <Content Include="Admin\EditBuildingDP.aspx" />
+    <Content Include="Admin\EditBuildingJM.aspx" />
+    <Content Include="Admin\EditBuildingTC.aspx" />
+    <Content Include="Admin\EditQuestions.aspx" />
+    <Content Include="Admin\ResetAuditProcessDP.aspx" />
+    <Content Include="Admin\ResetAuditProcessJM.aspx" />
+    <Content Include="Admin\ResetAuditProcessTC.aspx" />
+    <Content Include="Allocation.aspx" />
+    <Content Include="all\forgotpassword.aspx" />
+    <Content Include="AnalyticalInitialTC.aspx" />
+    <Content Include="AnalyticsInitial.aspx" />
+    <Content Include="AnalyticsInitialDP.aspx" />
+    <Content Include="Audit.aspx" />
+    <Content Include="Audit1.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\register.png" />
+    <Content Include="Images\savenext_button.png" />
+    <Content Include="ReportAuditorDP.aspx" />
+    <Content Include="ReportAuditorJMIncomplete.aspx" />
+    <Content Include="ReportAuditorTC.aspx" />
+    <Content Include="AuditDP.aspx" />
+    <Content Include="AuditHistoryJM.aspx" />
+    <Content Include="AuditLevelDP.aspx" />
+    <Content Include="AuditLevelJM.aspx" />
+    <Content Include="AuditLevelTC.aspx" />
+    <Content Include="AuditSaved.aspx" />
+    <Content Include="AuditSavedDP.aspx" />
+    <Content Include="AuditSavedTC.aspx" />
+    <Content Include="AuditTC.aspx" />
+    <Content Include="Admin\CurrentAuditsJM.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Default3.aspx" />
+    <Content Include="DPIndicators.aspx" />
+    <Content Include="DPIndicatorsCorporate.aspx" />
+    <Content Include="ErrorPages\Oops.aspx" />
+    <Content Include="forgotpassword.aspx" />
+    <Content Include="GridViewEdit.aspx" />
+    <Content Include="GridViewEditDP.aspx" />
+    <Content Include="GridViewEditDPSub.aspx" />
+    <Content Include="GridViewEditJMSub.aspx" />
+    <Content Include="GridViewEditTC.aspx" />
+    <Content Include="GridViewEditTCSub.aspx" />
+    <Content Include="HomeDP.aspx" />
+    <Content Include="HomeJM.aspx" />
+    <Content Include="HomePageDP.aspx" />
+    <Content Include="HomePageJM.aspx" />
+    <Content Include="HomePageTC.aspx" />
+    <Content Include="HomeTC.aspx" />
+    <Content Include="Images\Background.png" />
+    <Content Include="Images\background_image.jpg" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\complete_image.png" />
+    <Content Include="Images\continue.png" />
+    <Content Include="Images\dubai1.jpg" />
+    <Content Include="Images\dubai_holding_logo.png" />
+    <Content Include="Images\dubai_properties_logo.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\glossary_button.png" />
+    <Content Include="Images\guidance_button.png" />
+    <Content Include="Images\jumeirah_group_logo.png" />
+    <Content Include="Images\login_button.png" />
+    <Content Include="Images\main_image.png" />
+    <Content Include="Images\next_button.png" />
+    <Content Include="Images\nodata_image.png" />
+    <Content Include="Images\overallreport_button.png" />
+    <Content Include="Images\previous_button.png" />
+    <Content Include="Images\references_button.png" />
+    <Content Include="Images\save_button.png" />
+    <Content Include="Images\tecom_logo.png" />
+    <Content Include="Images\uncomplete_image.png" />
+    <Content Include="Images\update.png" />
+    <Content Include="Images\viewguide_button.png" />
+    <Content Include="Images\viewreports_button.png" />
+    <Content Include="Images\viewreport_button.png" />
+    <Content Include="indicators.aspx" />
+    <Content Include="JMIndicators.aspx" />
+    <Content Include="JMIndicatorsCorporate.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MainPage.aspx" />
+    <Content Include="newuser.aspx" />
+    <Content Include="PdfViwerGuide.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="ReportAudit.aspx" />
+    <Content Include="ReportAuditorJM.aspx" />
+    <Content Include="ReportByLocationJM.aspx" />
+    <Content Include="ReportScoreLocation.aspx" />
+    <Content Include="ReportScoreLocationDP.aspx" />
+    <Content Include="ReportScoreLocationTC.aspx" />
+    <Content Include="Style\StyleSheet4.css" />
+    <Content Include="Style\Sheet2.css" />
+    <Content Include="Style\Style.css" />
+    <Content Include="Style\StyleJM.css" />
+    <Content Include="Style\StyleSheet3.css" />
+    <Content Include="TCIndicators.aspx" />
+    <Content Include="TCIndicatorsCorporate.aspx" />
+    <Content Include="Admin\ViewPreviousAudits.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddAuditLocation.aspx.cs">
+      <DependentUpon>AddAuditLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAuditLocation.aspx.designer.cs">
+      <DependentUpon>AddAuditLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddAuditLocationDP.aspx.cs">
+      <DependentUpon>AddAuditLocationDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAuditLocationDP.aspx.designer.cs">
+      <DependentUpon>AddAuditLocationDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddAuditLocationTC.aspx.cs">
+      <DependentUpon>AddAuditLocationTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAuditLocationTC.aspx.designer.cs">
+      <DependentUpon>AddAuditLocationTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AssignRolesJM.aspx.cs">
+      <DependentUpon>AssignRolesJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AssignRolesJM.aspx.designer.cs">
+      <DependentUpon>AssignRolesJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDP.aspx.cs">
+      <DependentUpon>AdminDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDP.aspx.designer.cs">
+      <DependentUpon>AdminDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminJM.aspx.cs">
+      <DependentUpon>AdminJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminJM.aspx.designer.cs">
+      <DependentUpon>AdminJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTC.aspx.cs">
+      <DependentUpon>AdminTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminTC.aspx.designer.cs">
+      <DependentUpon>AdminTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CurrentAuditsDP.aspx.cs">
+      <DependentUpon>CurrentAuditsDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CurrentAuditsDP.aspx.designer.cs">
+      <DependentUpon>CurrentAuditsDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CurrentAuditsTC.aspx.cs">
+      <DependentUpon>CurrentAuditsTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CurrentAuditsTC.aspx.designer.cs">
+      <DependentUpon>CurrentAuditsTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditBuildingDP.aspx.cs">
+      <DependentUpon>EditBuildingDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditBuildingDP.aspx.designer.cs">
+      <DependentUpon>EditBuildingDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditBuildingJM.aspx.cs">
+      <DependentUpon>EditBuildingJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditBuildingJM.aspx.designer.cs">
+      <DependentUpon>EditBuildingJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditBuildingTC.aspx.cs">
+      <DependentUpon>EditBuildingTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditBuildingTC.aspx.designer.cs">
+      <DependentUpon>EditBuildingTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditQuestions.aspx.cs">
+      <DependentUpon>EditQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditQuestions.aspx.designer.cs">
+      <DependentUpon>EditQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ResetAuditProcessDP.aspx.cs">
+      <DependentUpon>ResetAuditProcessDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ResetAuditProcessDP.aspx.designer.cs">
+      <DependentUpon>ResetAuditProcessDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ResetAuditProcessJM.aspx.cs">
+      <DependentUpon>ResetAuditProcessJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ResetAuditProcessJM.aspx.designer.cs">
+      <DependentUpon>ResetAuditProcessJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ResetAuditProcessTC.aspx.cs">
+      <DependentUpon>ResetAuditProcessTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ResetAuditProcessTC.aspx.designer.cs">
+      <DependentUpon>ResetAuditProcessTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Allocation.aspx.cs">
+      <DependentUpon>Allocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Allocation.aspx.designer.cs">
+      <DependentUpon>Allocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyticalInitialTC.aspx.cs">
+      <DependentUpon>AnalyticalInitialTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnalyticalInitialTC.aspx.designer.cs">
+      <DependentUpon>AnalyticalInitialTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyticsInitial.aspx.cs">
+      <DependentUpon>AnalyticsInitial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnalyticsInitial.aspx.designer.cs">
+      <DependentUpon>AnalyticsInitial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyticsInitialDP.aspx.cs">
+      <DependentUpon>AnalyticsInitialDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnalyticsInitialDP.aspx.designer.cs">
+      <DependentUpon>AnalyticsInitialDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit.aspx.cs">
+      <DependentUpon>Audit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit.aspx.designer.cs">
+      <DependentUpon>Audit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit1.aspx.cs">
+      <DependentUpon>Audit1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit1.aspx.designer.cs">
+      <DependentUpon>Audit1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\SessionCheck.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAuditorDP.aspx.cs">
+      <DependentUpon>ReportAuditorDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAuditorDP.aspx.designer.cs">
+      <DependentUpon>ReportAuditorDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAuditorJMIncomplete.aspx.cs">
+      <DependentUpon>ReportAuditorJMIncomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAuditorJMIncomplete.aspx.designer.cs">
+      <DependentUpon>ReportAuditorJMIncomplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAuditorTC.aspx.cs">
+      <DependentUpon>ReportAuditorTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAuditorTC.aspx.designer.cs">
+      <DependentUpon>ReportAuditorTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSe3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSe3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSet.cs">
+      <DependentUpon>AuditDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AuditDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSet2345.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSet2345.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSetBuilding.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSetBuilding.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSetCharts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSetCharts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSetDubai.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSetDubai.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSetJmVertical.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSetJmVertical.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDBDataSetNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDBDataSetNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditDP.aspx.cs">
+      <DependentUpon>AuditDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditDP.aspx.designer.cs">
+      <DependentUpon>AuditDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHistoryJM.aspx.cs">
+      <DependentUpon>AuditHistoryJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditHistoryJM.aspx.designer.cs">
+      <DependentUpon>AuditHistoryJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditJMQuestionsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditJMQuestionsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditLevelDP.aspx.cs">
+      <DependentUpon>AuditLevelDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditLevelDP.aspx.designer.cs">
+      <DependentUpon>AuditLevelDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditLevelJM.aspx.cs">
+      <DependentUpon>AuditLevelJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditLevelJM.aspx.designer.cs">
+      <DependentUpon>AuditLevelJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditLevelTC.aspx.cs">
+      <DependentUpon>AuditLevelTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditLevelTC.aspx.designer.cs">
+      <DependentUpon>AuditLevelTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditorDataSet.cs">
+      <DependentUpon>AuditorDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AuditorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditSaved.aspx.cs">
+      <DependentUpon>AuditSaved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditSaved.aspx.designer.cs">
+      <DependentUpon>AuditSaved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditSavedDP.aspx.cs">
+      <DependentUpon>AuditSavedDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditSavedDP.aspx.designer.cs">
+      <DependentUpon>AuditSavedDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditSavedTC.aspx.cs">
+      <DependentUpon>AuditSavedTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditSavedTC.aspx.designer.cs">
+      <DependentUpon>AuditSavedTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTC.aspx.cs">
+      <DependentUpon>AuditTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditTC.aspx.designer.cs">
+      <DependentUpon>AuditTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CurrentAuditsJM.aspx.cs">
+      <DependentUpon>CurrentAuditsJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CurrentAuditsJM.aspx.designer.cs">
+      <DependentUpon>CurrentAuditsJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetQuestionAnswerJMVertical.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetQuestionAnswerJMVertical.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default3.aspx.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default3.aspx.designer.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DPIndicators.aspx.cs">
+      <DependentUpon>DPIndicators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DPIndicators.aspx.designer.cs">
+      <DependentUpon>DPIndicators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DPIndicatorsCorporate.aspx.cs">
+      <DependentUpon>DPIndicatorsCorporate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DPIndicatorsCorporate.aspx.designer.cs">
+      <DependentUpon>DPIndicatorsCorporate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\Oops.aspx.cs">
+      <DependentUpon>Oops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\Oops.aspx.designer.cs">
+      <DependentUpon>Oops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgotpassword.aspx.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotpassword.aspx.designer.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewEdit.aspx.cs">
+      <DependentUpon>GridViewEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewEdit.aspx.designer.cs">
+      <DependentUpon>GridViewEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewEditDP.aspx.cs">
+      <DependentUpon>GridViewEditDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewEditDP.aspx.designer.cs">
+      <DependentUpon>GridViewEditDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewEditDPSub.aspx.cs">
+      <DependentUpon>GridViewEditDPSub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewEditDPSub.aspx.designer.cs">
+      <DependentUpon>GridViewEditDPSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewEditJMSub.aspx.cs">
+      <DependentUpon>GridViewEditJMSub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewEditJMSub.aspx.designer.cs">
+      <DependentUpon>GridViewEditJMSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewEditTC.aspx.cs">
+      <DependentUpon>GridViewEditTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewEditTC.aspx.designer.cs">
+      <DependentUpon>GridViewEditTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewEditTCSub.aspx.cs">
+      <DependentUpon>GridViewEditTCSub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewEditTCSub.aspx.designer.cs">
+      <DependentUpon>GridViewEditTCSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeDP.aspx.cs">
+      <DependentUpon>HomeDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeDP.aspx.designer.cs">
+      <DependentUpon>HomeDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeJM.aspx.cs">
+      <DependentUpon>HomeJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeJM.aspx.designer.cs">
+      <DependentUpon>HomeJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageDP.aspx.cs">
+      <DependentUpon>HomePageDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageDP.aspx.designer.cs">
+      <DependentUpon>HomePageDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageJM.aspx.cs">
+      <DependentUpon>HomePageJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageJM.aspx.designer.cs">
+      <DependentUpon>HomePageJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageTC.aspx.cs">
+      <DependentUpon>HomePageTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageTC.aspx.designer.cs">
+      <DependentUpon>HomePageTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTC.aspx.cs">
+      <DependentUpon>HomeTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeTC.aspx.designer.cs">
+      <DependentUpon>HomeTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="indicators.aspx.cs">
+      <DependentUpon>indicators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="indicators.aspx.designer.cs">
+      <DependentUpon>indicators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JMIndicators.aspx.cs">
+      <DependentUpon>JMIndicators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JMIndicators.aspx.designer.cs">
+      <DependentUpon>JMIndicators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JMIndicatorsCorporate.aspx.cs">
+      <DependentUpon>JMIndicatorsCorporate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JMIndicatorsCorporate.aspx.designer.cs">
+      <DependentUpon>JMIndicatorsCorporate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyReportDataSet.cs">
+      <DependentUpon>MyReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newuser.aspx.cs">
+      <DependentUpon>newuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newuser.aspx.designer.cs">
+      <DependentUpon>newuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\AuditAnswers.cs" />
+    <Compile Include="Old_App_Code\DBUtil.cs" />
+    <Compile Include="Old_App_Code\Examination.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\ExaminationConsusIntroJM.cs" />
+    <Compile Include="Old_App_Code\ExaminationCorporate.cs" />
+    <Compile Include="Old_App_Code\ExaminationDP.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\ExaminationTC.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\Question.cs" />
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\QuestionAnswers.cs" />
+    <Compile Include="Old_App_Code\Pagebase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\QuestionsSavedDP.cs" />
+    <Compile Include="Old_App_Code\QuestionsSavedTC.cs" />
+    <Compile Include="Old_App_Code\SavedExamination.cs" />
+    <Compile Include="Old_App_Code\SavedExaminationCorporateJM.cs" />
+    <Compile Include="Old_App_Code\SavedExaminationDP.cs" />
+    <Compile Include="Old_App_Code\SavedExaminationTC.cs" />
+    <Compile Include="Old_App_Code\SavedQuestions.cs" />
+    <Compile Include="Old_App_Code\UserInfo.cs" />
+    <Compile Include="PdfViwerGuide.aspx.cs">
+      <DependentUpon>PdfViwerGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PdfViwerGuide.aspx.designer.cs">
+      <DependentUpon>PdfViwerGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAudit.aspx.cs">
+      <DependentUpon>ReportAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAudit.aspx.designer.cs">
+      <DependentUpon>ReportAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAuditorJM.aspx.cs">
+      <DependentUpon>ReportAuditorJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportAuditorJM.aspx.designer.cs">
+      <DependentUpon>ReportAuditorJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportByLocationJM.aspx.cs">
+      <DependentUpon>ReportByLocationJM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportByLocationJM.aspx.designer.cs">
+      <DependentUpon>ReportByLocationJM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportScoreLocation.aspx.cs">
+      <DependentUpon>ReportScoreLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportScoreLocation.aspx.designer.cs">
+      <DependentUpon>ReportScoreLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportScoreLocationDP.aspx.cs">
+      <DependentUpon>ReportScoreLocationDP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportScoreLocationDP.aspx.designer.cs">
+      <DependentUpon>ReportScoreLocationDP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportScoreLocationTC.aspx.cs">
+      <DependentUpon>ReportScoreLocationTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportScoreLocationTC.aspx.designer.cs">
+      <DependentUpon>ReportScoreLocationTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TCIndicators.aspx.cs">
+      <DependentUpon>TCIndicators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TCIndicators.aspx.designer.cs">
+      <DependentUpon>TCIndicators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TCIndicatorsCorporate.aspx.cs">
+      <DependentUpon>TCIndicatorsCorporate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TCIndicatorsCorporate.aspx.designer.cs">
+      <DependentUpon>TCIndicatorsCorporate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewPreviousAudits.aspx.cs">
+      <DependentUpon>ViewPreviousAudits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewPreviousAudits.aspx.designer.cs">
+      <DependentUpon>ViewPreviousAudits.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="all\all.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Web.config" />
+    <None Include="AuditDBDataSe3.xsc">
+      <DependentUpon>AuditDBDataSe3.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSe3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSe3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSe3.xss">
+      <DependentUpon>AuditDBDataSe3.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSet.xsc">
+      <DependentUpon>AuditDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSet.xss">
+      <DependentUpon>AuditDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSet2.xsc">
+      <DependentUpon>AuditDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSet2.xss">
+      <DependentUpon>AuditDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSet2345.xsc">
+      <DependentUpon>AuditDBDataSet2345.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSet2345.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSet2345.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSet2345.xss">
+      <DependentUpon>AuditDBDataSet2345.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetBuilding.xsc">
+      <DependentUpon>AuditDBDataSetBuilding.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetBuilding.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSetBuilding.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSetBuilding.xss">
+      <DependentUpon>AuditDBDataSetBuilding.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetCharts.xsc">
+      <DependentUpon>AuditDBDataSetCharts.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetCharts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSetCharts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSetCharts.xss">
+      <DependentUpon>AuditDBDataSetCharts.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetDubai.xsc">
+      <DependentUpon>AuditDBDataSetDubai.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetDubai.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSetDubai.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSetDubai.xss">
+      <DependentUpon>AuditDBDataSetDubai.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetJmVertical.xsc">
+      <DependentUpon>AuditDBDataSetJmVertical.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetJmVertical.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSetJmVertical.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSetJmVertical.xss">
+      <DependentUpon>AuditDBDataSetJmVertical.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetNew.xsc">
+      <DependentUpon>AuditDBDataSetNew.xsd</DependentUpon>
+    </None>
+    <None Include="AuditDBDataSetNew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditDBDataSetNew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditDBDataSetNew.xss">
+      <DependentUpon>AuditDBDataSetNew.xsd</DependentUpon>
+    </None>
+    <None Include="AuditJMQuestionsDataSet.xsc">
+      <DependentUpon>AuditJMQuestionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditJMQuestionsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditJMQuestionsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuditJMQuestionsDataSet.xss">
+      <DependentUpon>AuditJMQuestionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditorDataSet.xsc">
+      <DependentUpon>AuditorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditorDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditorDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AuditorDataSet.xss">
+      <DependentUpon>AuditorDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="Customers.xsc">
+      <DependentUpon>Customers.xsd</DependentUpon>
+    </None>
+    <None Include="Customers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Customers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Customers.xss">
+      <DependentUpon>Customers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetQuestionAnswerJMVertical.xsc">
+      <DependentUpon>DataSetQuestionAnswerJMVertical.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetQuestionAnswerJMVertical.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetQuestionAnswerJMVertical.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetQuestionAnswerJMVertical.xss">
+      <DependentUpon>DataSetQuestionAnswerJMVertical.xsd</DependentUpon>
+    </None>
+    <Content Include="Definitions and Interpretations.pdf" />
+    <Content Include="Glossary.pdf" />
+    <Content Include="Dubai Holding User Guide.pdf" />
+    <None Include="MyReportDataSet.xsc">
+      <DependentUpon>MyReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MyReportDataSet.xss">
+      <DependentUpon>MyReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="ReportAuditExternel.rdlc" />
+    <EmbeddedResource Include="ReportAuditor.rdlc" />
+    <EmbeddedResource Include="ReportAuditReport.rdlc" />
+    <EmbeddedResource Include="ReportQuestionsJM.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1131</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

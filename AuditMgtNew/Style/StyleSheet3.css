@@ -1,0 +1,747 @@
+﻿* {
+	margin-left: 0;
+    margin-right: 0;
+    margin-top: 1px;
+}
+html, body,form{
+	height:100%;	
+    margin: 0;
+    padding: 0;
+    width:100%;
+   
+    
+     }
+.wrapper 
+{
+   
+	padding: 0;
+	min-height: 100%;
+	position:relative;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+    
+}
+ *  
+ {
+         font-family:Arial !important;
+         font-size:14px;
+         color: #444444;
+         
+         
+         
+ }
+
+#header,#navigation,#content {
+	overflow: hidden;
+	
+}
+.footer, .push {
+	height: 100px; /* .push must be the same height as .footer */
+	
+}
+.footer{
+	
+	background: #EC1B30;
+	height: 100px;
+	bottom:0;
+	left:0;
+	
+	
+}
+.footer ul
+{
+	
+	padding: 0;
+	
+}
+
+.footer ul li
+{
+    
+	list-style-type: none;
+	display:inline;
+	
+}
+
+.footer li a
+{
+	display: block;
+	float: right;
+	padding:0px 20px 0px 0px;
+	color: white;
+	text-decoration: none;
+	
+}
+#tblLoginJM
+{
+    
+    position:relative;
+    top:10px;
+    width :40%;
+   
+    
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+    
+    
+}
+
+#header 
+{
+   
+	padding: 0px;
+	background:white;
+	border-bottom:2px solid red;
+}
+#hr1
+{
+  position: relative; 
+ padding-left:0px;
+  margin-left:0px;
+    
+}
+#logout 
+{
+    
+     position: relative;
+    
+     padding-top:50px;
+     padding-right:0px;
+    margin:0px;
+    
+    
+}
+#btnlogout
+{
+    position: relative;    
+    float:right;
+    list-style-type: none;
+	display: inline;
+    top: 0px;
+    left: 0px;
+}
+#navigation
+{
+	float: right;
+	width: 100%;
+	background:#5ee;
+	height:80px;
+	
+	
+	
+}
+
+#header ul
+{
+	margin: 0;
+	padding: 0;
+	margin-bottom:10px;
+	
+}
+
+#header ul li
+{
+	list-style-type: none;
+	display: inline;
+	
+	
+}
+
+#header li a
+{
+	display: block;
+	float: right;
+	padding: 5px 10px;
+	color: #878787;
+	text-decoration: none;
+	border-right: 1px solid silver;
+	
+}
+
+#header li a:hover { background:red; }
+
+#content
+{
+    padding:10px;
+	padding-bottom:80px; 
+    
+}
+
+#txtQuestion
+{
+   
+   
+    
+}
+#TextBox1
+{
+    position: relative;    
+    top:5px; 
+    width :84%;
+    height:200px; 
+    left:50px;
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;	
+	outline: none;	
+}
+#CustomValidator1
+{
+    
+    position: relative;      
+    left:50px;
+	    
+    
+}
+#tblAudit
+{
+    position: relative;    
+    top:8px; 
+    width :85%;    
+    left:50px;
+    
+    
+}
+#tblButtons 
+{
+    position: relative;    
+    top:8px; 
+    width :85%;    
+    left:50px;
+    
+    
+}
+#tblAudit2
+{
+    position: relative;    
+    top:8px;
+    width :87%;    
+    left:50px;
+    
+}   
+
+#TextBox2
+{
+   
+	background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	height:100px;
+	
+	outline: none;
+	
+	
+	
+	
+}
+#TextBox3
+{
+   
+	background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	height:100px;
+	
+	
+	outline: none;
+	
+	
+	
+}
+
+#txtauditor
+{
+    background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	height:100px;
+	
+	
+	outline: none;
+    
+    
+}
+#table1
+{
+    margin-left:50px;
+   
+    
+}
+#Button4
+{    
+     margin-left:80px;
+     background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+}
+
+    
+
+#Label1
+{
+  margin-top:2em; 
+  float: left;
+  width : 10em;
+  margin-left :3.5em;
+    
+}
+#btncontinue
+{
+    
+      margin-left:80px;
+    
+}
+#lblcurrentCS
+{
+   position: relative;    
+    top:8px; 
+    
+    left:50px;
+}
+
+#Label2
+{
+ position:relative;
+ float: right;
+ width : 10em;
+ margin-right :5px;
+ margin-top:2em; 
+}
+#Label3
+{  
+  
+    position: relative;    
+    top:2px;    
+    left:50px;
+   
+}
+#Label4
+{
+  width : 10em;
+  margin-left :3.5em;
+  float: left;  
+ 
+    
+}
+#Label5
+{
+ float:right;
+ padding-right :362px;
+    
+}
+#Panel1
+{
+    
+      
+    position:relative;
+    
+    left:15px;
+    top:20px;   
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+    
+}
+#ModalPanel
+{
+    position:relative;
+    
+    left:15px;
+    top:20px;   
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+    
+}
+#tbl1
+{
+    
+      
+    position:relative;
+    width:80%;   
+    left:80px;
+    top:20px;   
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+    
+}
+#Label11
+{
+    position:relative;
+   left:80px;   
+}
+#Label52
+{
+   position:relative;
+   left:80px;   
+}
+#lbladdDP
+{
+   position:relative;
+   left:80px;   
+    
+    
+}
+#lbladdTC
+{
+   position:relative;
+   left:80px;   
+    
+    
+}
+#Button1
+{
+    position:relative;
+    top:10px;
+    left:80px;
+    background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+     
+    
+}
+#Button2
+{
+    position:relative;
+    top:10px;
+    left:100px;
+
+    background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+}
+#Button3
+{
+    position:relative;
+    top:10px;
+    left:120px;
+
+    background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+}
+
+#Table1b
+{
+    
+      
+    position:relative;
+    width:80%;   
+    left:80px;
+    top:20px;   
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	    }
+	    
+#Table1c
+{
+    
+      
+    position:relative;
+    width:80%;   
+    left:80px;
+    top:20px;   
+	background: #EBEBEB;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+	
+    
+}
+#ValidationSummary1
+{
+    position:relative;
+    width:80%;   
+    left:50px;
+    
+    
+}
+#CustomValidator1
+{
+    
+    
+    
+}   
+
+#Panel2
+{
+    position:relative;
+    top:10px;
+    width :100%;
+    left:150px;   
+	background: white;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+}
+.btnEdit
+{
+    border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+    
+}
+#header,#navigation,#content,.footer {
+overflow:hidden;
+}
+#content
+{
+   min-height:100%;
+    
+    
+}
+#Image2
+{
+   
+    width:380px;
+    height:220px;
+    float:right;
+    
+    
+}
+.rounded_corners
+    {
+        border: 1px solid #A1DCF2;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .rounded_corners td, .rounded_corners th
+    {
+        border: 1px solid #A1DCF2;
+        font-family: Arial;
+        font-size: 10pt;
+        text-align: center;
+    }
+    .rounded_corners table table td
+    {
+        border-style: none;
+    }
+    
+    #Panel11
+    {
+    
+      
+    position:relative;
+    width :90%;
+    left:15px;
+    top:10px;   
+	background: #EBEBEB;
+	border: 1px solid #878787;
+	border-radius: 5px;
+	box-shadow: 0 0 5px green inset;
+	color: #878787;
+	
+    
+    }
+#Panel21
+{
+    position:relative;
+    top:10px;
+    width :90%;
+    left:15px;   
+	background: white;
+	border: 1px solid #878787;
+	border-radius: 5px;
+	box-shadow: 0 0 5px green inset;
+	color: #878787;
+    
+}
+#Panel3
+{
+    position:relative;
+    top:10px;
+    width :70%;
+    left:15px;   
+	background: white;
+	border: 1px solid #878787;
+	border-radius: 5px;
+	box-shadow: 0 0 5px green inset;
+	color: #878787;
+    
+}
+  #Label3
+    {
+       
+       
+        
+    }
+    #txtName,#txtKnownas,#txtPostcode
+    {
+      position:relative;
+       
+    }
+    #DropDownList1312,#txtName,#txtKnownas,#txtPostcode,#DropDownList15,#DropDownList16,#DropDownList18,#DropDownList1,#DropDownList2,#txtfloors,#TextBox123,#DropDownList8,#DropDownList1,#DropDownList131,#DropDownList2,#DropDownList1443,#TextBox321,#TextBox1c,#TextBox7,#TextBox2c,#TextBox8,#TextBox3c,#TextBox3m,#TextBox5,#TextBox6,#TextBox1b,#TextBox1d,#TextBox2bd,#TextBox2d,#TextBox3b,#TextBox1de,#TextBox5b,#TextBox2de,#TextBox3de
+    {
+      
+        border: 1px solid #878787;
+	    border-radius: 5px;
+       
+}
+    #Label6
+    {
+        
+        
+    }
+    #txtPostcode
+    {    top: 0px;
+    left: 0px;
+}
+    #DropDownList15
+    {
+     float:right;
+     margin-top:2px;
+     margin-right:20px;   
+    }
+ 
+    #DropDownList16
+    {
+     float:right;
+     margin-top:2px;
+     margin-right:20px;   
+    }
+     #DropDownList18
+    {
+     float:right;
+     margin-top:2px;
+     margin-right:20px;
+     margin-bottom:20px;    
+    }
+     #DropDownList1
+    {
+   
+     margin-top:2px;
+       
+    }
+    #DropDownList2
+    {
+   
+     margin-top:8px;
+       
+    }
+    #DropDownList5
+    {
+   
+    float:right;
+    margin-right:20px;
+       
+    }
+    #Label27
+    {
+     
+      
+        
+    }
+    #txtfloors
+    {
+         margin-top:1px;
+        
+    }
+    #Label54
+    {
+    
+     margin-top:2px;
+     margin-left:60px; 
+        
+        
+    }
+    #Label55
+    {
+    
+     margin-top:2px;
+     margin-left:60px;
+        
+    }
+     #Label56
+    {
+    float:left;
+    margin-bottom:100px;
+   
+        
+    }
+    #Label57
+    {
+    float:right;    
+    margin-top:-89px;
+    margin-right:262px;
+        
+    }
+   .copy
+    {
+         margin-left:20px;
+         margin-top:40px;
+         color:White;
+        
+    }
+    .heading
+    {
+        top:10px;
+        color:Red;
+        font-size:medium;
+        
+    }
+    .logo
+    {
+         margin-top:25px;
+         margin-bottom:25px;
+         
+    }
+    #tblLoginJM
+{
+    
+    position:relative;
+    top:1px;
+    width:800px;
+    height:300px; 
+    border: 1px solid #DDD;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #DDD inset;
+	color: #666;
+    
+    
+    
+}
+
+  
+  
+    
+  

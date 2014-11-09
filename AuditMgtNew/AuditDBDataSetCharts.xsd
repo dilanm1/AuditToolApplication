@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AuditDBDataSetCharts" targetNamespace="http://tempuri.org/AuditDBDataSetCharts.xsd" xmlns:mstns="http://tempuri.org/AuditDBDataSetCharts.xsd" xmlns="http://tempuri.org/AuditDBDataSetCharts.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="examConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="examConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.examConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_subject_locationTableAdapter" GeneratorDataComponentClassName="View_subject_locationTableAdapter" Name="View_subject_location" UserDataComponentName="View_subject_locationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="examConnectionString (Web.config)" DbObjectName="AuditDB.dbo.View_subject_location" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT location, sid, locationid, sname, noq, weighting, status, score FROM dbo.View_subject_location</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="location" DataSetColumn="location" />
+              <Mapping SourceColumn="sid" DataSetColumn="sid" />
+              <Mapping SourceColumn="locationid" DataSetColumn="locationid" />
+              <Mapping SourceColumn="sname" DataSetColumn="sname" />
+              <Mapping SourceColumn="noq" DataSetColumn="noq" />
+              <Mapping SourceColumn="weighting" DataSetColumn="weighting" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="score" DataSetColumn="score" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AuditDBDataSetCharts" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AuditDBDataSetCharts" msprop:Generator_UserDSName="AuditDBDataSetCharts">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_subject_location" msprop:Generator_TableClassName="View_subject_locationDataTable" msprop:Generator_TableVarName="tableView_subject_location" msprop:Generator_TablePropName="View_subject_location" msprop:Generator_RowDeletingName="View_subject_locationRowDeleting" msprop:Generator_RowChangingName="View_subject_locationRowChanging" msprop:Generator_RowEvHandlerName="View_subject_locationRowChangeEventHandler" msprop:Generator_RowDeletedName="View_subject_locationRowDeleted" msprop:Generator_UserTableName="View_subject_location" msprop:Generator_RowChangedName="View_subject_locationRowChanged" msprop:Generator_RowEvArgName="View_subject_locationRowChangeEvent" msprop:Generator_RowClassName="View_subject_locationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="location" msprop:Generator_ColumnVarNameInTable="columnlocation" msprop:Generator_ColumnPropNameInRow="location" msprop:Generator_ColumnPropNameInTable="locationColumn" msprop:Generator_UserColumnName="location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sid" msprop:Generator_ColumnVarNameInTable="columnsid" msprop:Generator_ColumnPropNameInRow="sid" msprop:Generator_ColumnPropNameInTable="sidColumn" msprop:Generator_UserColumnName="sid" type="xs:int" />
+              <xs:element name="locationid" msprop:Generator_ColumnVarNameInTable="columnlocationid" msprop:Generator_ColumnPropNameInRow="locationid" msprop:Generator_ColumnPropNameInTable="locationidColumn" msprop:Generator_UserColumnName="locationid" type="xs:int" minOccurs="0" />
+              <xs:element name="sname" msprop:Generator_ColumnVarNameInTable="columnsname" msprop:Generator_ColumnPropNameInRow="sname" msprop:Generator_ColumnPropNameInTable="snameColumn" msprop:Generator_UserColumnName="sname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="noq" msprop:Generator_ColumnVarNameInTable="columnnoq" msprop:Generator_ColumnPropNameInRow="noq" msprop:Generator_ColumnPropNameInTable="noqColumn" msprop:Generator_UserColumnName="noq" type="xs:int" minOccurs="0" />
+              <xs:element name="weighting" msprop:Generator_ColumnVarNameInTable="columnweighting" msprop:Generator_ColumnPropNameInRow="weighting" msprop:Generator_ColumnPropNameInTable="weightingColumn" msprop:Generator_UserColumnName="weighting" type="xs:double" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="score" msprop:Generator_ColumnVarNameInTable="columnscore" msprop:Generator_ColumnPropNameInRow="score" msprop:Generator_ColumnPropNameInTable="scoreColumn" msprop:Generator_UserColumnName="score" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

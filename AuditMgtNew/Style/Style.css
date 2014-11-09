@@ -1,0 +1,160 @@
+﻿
+html, form, body  {
+	margin:0;
+	padding:0;
+   	min-height:100%;
+   	font-family:#878787;
+    overflow: auto;
+	
+   
+}
+#container {
+	min-height:100%;
+	position:relative;   	
+	margin-bottom: -80px;
+    top: 0px;
+    left: 0px;
+    height: 370px;
+}
+#header 
+{
+   
+	padding: 10px;
+	background:white;
+	border-bottom:2px solid red;
+}
+#navigation
+{
+	float: right;
+	width: 100%;
+	background:#5ee;
+	
+	
+}
+ *  
+     {
+         font-family:Arial !important;
+         font-size:14px;
+         color: #444444;
+         
+         
+         
+         }
+
+#header ul
+{
+	margin: 0;
+	padding: 0;
+	margin-bottom:20px;
+}
+
+#header ul li
+{
+	list-style-type: none;
+	display: inline;
+	
+}
+
+#header li a
+{
+	display: block;
+	float: right;
+	padding: 5px 10px;
+	color: #878787;
+	text-decoration: none;
+	border-right: 1px solid silver;
+}
+
+#header li a:hover { background:red; }
+#content {
+	
+	
+    height:inherit;
+   
+}
+#footer {
+	width:100%;
+	height:80px;
+	position:inherit;
+	bottom:0;
+	left:0;
+	background-color:#EC1B30;
+	
+}
+
+
+#footer ul
+{
+	
+	padding: 0;
+	
+}
+
+#footer ul li
+{
+    
+	list-style-type: none;
+	display:inline;
+	
+}
+
+#footer li a
+{
+	display: block;
+	float: right;
+	padding:0px 20px 0px 0px;
+	color: white;
+	text-decoration: none;
+	
+}
+
+  .rounded_corners
+    {
+        border: 1px solid #A1DCF2;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .rounded_corners td, .rounded_corners th
+    {
+        border: 1px solid #A1DCF2;
+        font-family: Arial;
+        font-size: 10pt;
+        text-align: center;
+    }
+    .rounded_corners table table td
+    {
+        border-style: none;
+    }
+    #TextBox1
+    {
+        margin-right:20px;
+        margin-left :20px;
+        
+        
+       
+    }
+      .copy
+    {
+         margin-left:20px;
+         margin-top:40px;
+         color:White;
+        
+    }
+    .heading
+    {
+        top:10px;
+        color:Red;
+        font-size:medium;
+        
+    }
+    .logo
+    {
+         margin-top:25px;
+         margin-bottom:25px;
+         
+    }
+
+  
+  
