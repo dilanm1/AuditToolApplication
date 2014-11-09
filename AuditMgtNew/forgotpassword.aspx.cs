@@ -88,7 +88,7 @@ namespace AuditMgtNew
 
         protected void BtnCancelClick(object sender, EventArgs e)
         {
-            Response.Redirect("../login.aspx");
+            Response.Redirect("login.aspx");
         }
     }
 }
